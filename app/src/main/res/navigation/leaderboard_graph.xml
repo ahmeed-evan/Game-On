@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/leaderboard_graph.xml"
+    app:startDestination="@id/currentWeekLeaderboardFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_leaderboard_current_week"
+        android:id="@+id/currentWeekLeaderboardFragment"
+        android:name="com.innovertech.gameon.view.fragment.CurrentWeekLeaderboardFragment"
+        android:label="CurrentWeekLeaderboardFragment" />
+<!--    <fragment-->
+<!--        android:id="@+id/previousWeekLeaderboardFragment"-->
+<!--        tools:layout="@layout/fragment_leaderboard_previous_week"-->
+<!--        android:name="com.innovertech.gameon.view.fragment.PreviousWeekLeaderboardFragment"-->
+<!--        android:label="PreviousWeekLeaderboardFragment" />-->
+</navigation>

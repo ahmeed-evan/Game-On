@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_nav"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Policy"
+            android:textAppearance="@style/poppins_20_black"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/pointDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_point_details"
+        android:textAppearance="@style/poppins_20_white"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayout" />
+
+
+    <ScrollView
+        android:id="@+id/pointScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pointDetailsText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/titleCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/custom_blue"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/nameTitleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="@string/text_name"
+                        android:textAppearance="@style/poppins_17_black"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="8dp"
+                        android:text="@string/text_point"
+                        android:textAppearance="@style/poppins_17_black"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pointDetailsCardOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@id/titleCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/eachRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="1. For Each Run"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eachRunPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="0.5"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/eachRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eachRunTV" />
+
+                    <TextView
+                        android:id="@+id/eachBoundaryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="2. For Each Boundary"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/eachRunTV" />
+
+                    <TextView
+                        android:id="@+id/eachBoundaryPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="0.5"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/eachBoundaryTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eachBoundaryTV" />
+
+                    <TextView
+                        android:id="@+id/eachOverBoundaryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="3. For Each Over-Boundary"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/eachBoundaryTV" />
+
+                    <TextView
+                        android:id="@+id/eachOverBoundaryPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="1.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/eachOverBoundaryTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eachOverBoundaryTV" />
+
+                    <TextView
+                        android:id="@+id/fiftyRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="4. For 50 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/eachOverBoundaryTV" />
+
+                    <TextView
+                        android:id="@+id/fiftyPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="4.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/fiftyRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/fiftyRunTV" />
+
+                    <TextView
+                        android:id="@+id/hundredRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="5. For 100 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fiftyRunTV" />
+
+                    <TextView
+                        android:id="@+id/hundredPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="8.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/hundredRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/hundredRunTV" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pointDetailsCardTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/custom_blue"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@id/pointDetailsCardOne">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/hundredFiftyRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="1. For 150 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hundredFiftyPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="14.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/hundredFiftyRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/hundredFiftyRunTV" />
+
+                    <TextView
+                        android:id="@+id/twoHundredRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="2. For 200 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/hundredFiftyRunTV" />
+
+                    <TextView
+                        android:id="@+id/twoHundredPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="20.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/twoHundredRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/twoHundredRunTV" />
+
+                    <TextView
+                        android:id="@+id/twoHundredFifityRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="3. For 250 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/twoHundredPointTV" />
+
+                    <TextView
+                        android:id="@+id/twoHundredFifityPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="30.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/twoHundredFifityRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/twoHundredFifityRunTV" />
+
+                    <TextView
+                        android:id="@+id/threeHundredRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="4. For 300 Runs"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/twoHundredFifityRunTV" />
+
+                    <TextView
+                        android:id="@+id/threeHundredPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="50.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/threeHundredRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/threeHundredRunTV" />
+
+                    <TextView
+                        android:id="@+id/duckTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="5. For Duck"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/threeHundredRunTV" />
+
+                    <TextView
+                        android:id="@+id/duckPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="-2.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/duckTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/duckTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pointDetailsCardThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/custom_blue"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@id/pointDetailsCardTwo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/eachWicketTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="1. For Each Wicket"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eachWicketPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="10.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/eachWicketTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eachWicketTV" />
+
+                    <TextView
+                        android:id="@+id/threeWicketHallTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="2. For 3 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/eachWicketTV" />
+
+                    <TextView
+                        android:id="@+id/threeWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="10.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/threeWicketHallTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/threeWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/fourWicketHallRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="3. For 4 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/threeWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/fourWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="20.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/fourWicketHallRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/fourWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/fiveWicketHallRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="4. For 5 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fourWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/fiveWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="30.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/fiveWicketHallRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/fiveWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/sixWicketHallTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="5. For 6 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fiveWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/sixWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="40.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/sixWicketHallTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/sixWicketHallTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pointDetailsCardFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@id/pointDetailsCardThree">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/sevenWicketHallTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="1. For 7 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sevenWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="55.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/sevenWicketHallTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/sevenWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/eightWicketHallTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="2. For 8 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sevenWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/eightWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="70.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/eightWicketHallTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eightWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/nineWicketHallRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="3. For 9 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/eightWicketHallTV" />
+
+                    <TextView
+                        android:id="@+id/nineWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="90.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/nineWicketHallRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/nineWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/tenWicketHallRunTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="4. For 10 Wickets Hall"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nineWicketHallRunTV" />
+
+                    <TextView
+                        android:id="@+id/tenWicketHallPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="110.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/tenWicketHallRunTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tenWicketHallRunTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pointDetailsCardFive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+                app:layout_constraintRight_toRightOf="@id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@id/pointDetailsCardFour">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_top_bar"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/singleCatchTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="1. For A Catch"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/singleCatchPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="3.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/singleCatchTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/singleCatchTV" />
+
+                    <TextView
+                        android:id="@+id/runOutTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="2. For A Runout"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/singleCatchTV" />
+
+                    <TextView
+                        android:id="@+id/runOutPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="4.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/runOutTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/runOutTV" />
+
+                    <TextView
+                        android:id="@+id/stampingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="3. For A Stamping"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/runOutTV" />
+
+                    <TextView
+                        android:id="@+id/stampingPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="6.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/stampingTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/stampingTV" />
+
+                    <TextView
+                        android:id="@+id/inTheSquadTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="4. For Being in Squad"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stampingTV" />
+
+                    <TextView
+                        android:id="@+id/inSquadPointTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="2.0"
+                        android:textAppearance="@style/_policy_text"
+                        app:layout_constraintBottom_toBottomOf="@id/inTheSquadTV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/inTheSquadTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

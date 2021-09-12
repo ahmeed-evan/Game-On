@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/notification"
+        android:title="Notification"
+        android:icon="@drawable/ic_notification"/>
+    <item
+        android:id="@+id/policy"
+        android:icon="@drawable/ic_policy"
+        android:title="Policy" />
+    <item
+        android:id="@+id/prize"
+        android:icon="@drawable/ic_gift_box"
+        android:title="Prize" />
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/ic_share"/>
+    <item
+        android:id="@+id/join_community"
+        android:title="Join Our Community"
+        android:icon="@drawable/ic_join_community"/>
+    <item
+        android:id="@+id/leaderBoard"
+        android:icon="@drawable/ic_leaderboard"
+        android:title="Leaderboard" />
+
+    <item
+        android:id="@+id/rate_us"
+        android:icon="@drawable/ic_rating"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
+
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.innovertech.gameon">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/game_on_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/game_on_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GameOn"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.innovertech.gameon.view.activity.PlayerPointDetailsActivity"></activity>
+        <activity android:name="com.innovertech.gameon.view.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
